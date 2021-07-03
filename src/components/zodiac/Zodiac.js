@@ -4,7 +4,7 @@ const Zodiac = ({ triggerNextStep, trigger, steps }) => {
   const dob = steps.ans_dob.value;
   const sign = getDoziacSign(Number(dob.month), Number(dob.day));
   useEffect(() => {
-    triggerNextStep({ value: '', trigger });
+    triggerNextStep({ value: sign, trigger });
   }, []);
   return (
     <div
