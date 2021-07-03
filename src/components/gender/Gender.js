@@ -20,7 +20,7 @@ const Gender = ({ triggerNextStep, trigger }) => {
   return (
     <div className="Gender">
       <button
-        className={classnames({ hide: hideMale })}
+        className={classnames('Gender__male', { hide: hideMale })}
         onClick={() => handleClick(genderOptions.MALE)}
       >
         Male

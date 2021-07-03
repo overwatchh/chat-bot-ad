@@ -9,22 +9,38 @@ import './form-data.scss';
 const FormData = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [phoneValidateMessage, setPhoneValidateMessage] = useState('');
   const [address, setAddress] = useState('');
   const [submited, setSubmited] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handlePhone = (phone) => {
+    const regex = new RegExp('^\\d{11}$', 'g');
+    const is11PhoneNumber = regex.test(phone);
+    if (!is11PhoneNumber) {
+      setPhoneValidateMessage('*Please enter 11 numbers');
+    } else {
+      setPhoneValidateMessage('');
+    }
+    setPhone(phone);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = { name, phone_number: phone, address };
-    setIsSubmitting(true);
-    addRow(data).then(
-      () => {
-        setSubmited(true);
-        setIsSubmitting(false);
-      },
-      () => {
-        alert('some thing went wrong');
-      }
-    );
+    const isValidateForm = phoneValidateMessage === '' ? true : false;
+    if (isValidateForm) {
+      const data = { name, phone_number: phone, address };
+      setIsSubmitting(true);
+      addRow(data).then(
+        () => {
+          setSubmited(true);
+          setIsSubmitting(false);
+        },
+        () => {
+          alert('some thing went wrong');
+        }
+      );
+    }
   };
   return (
     <div className="Contact_form px-2">
@@ -45,8 +61,11 @@ const FormData = () => {
           </Form.Group>
           <Form.Group controlId="userPhone">
             <Form.Label>Phone</Form.Label>
+            <Form.Label className="text-danger Contact_form-phoneValidate">
+              {phoneValidateMessage}
+            </Form.Label>
             <Form.Control
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => handlePhone(e.target.value)}
               value={phone}
               type="text"
               placeholder="Enter your phone number"

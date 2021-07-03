@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+import './InputDateTime.scss';
+
 const InputDateTime = ({ triggerNextStep, trigger }) => {
   const [day, setDay] = useState(null);
   const [month, setMonth] = useState(null);
@@ -19,8 +22,9 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
     handleNextStep();
   }, [day, month]);
   return (
-    <div>
+    <div className="InputDateTime">
       <select
+        className="InputDateTime__day"
         onChange={(e) => {
           setDay(e.target.value);
         }}
