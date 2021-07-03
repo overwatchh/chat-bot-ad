@@ -1,0 +1,12 @@
+.carousel,
+.media-video {
+  width: 300px;
+  height: 225px;
+  @media (max-width: 575px) {
+    width: 150px;
+    height: 112.5px;
+  }
+}
+.Media {
+  margin: 0 auto;
+}

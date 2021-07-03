@@ -1,0 +1,7 @@
+.Contact_form-title {
+  &-title {
+    @media (max-width: 575px) {
+      font-size: 16px;
+    }
+  }
+}
