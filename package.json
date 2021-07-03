@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
     "get-zodiac-sign": "^1.0.3",
     "google-spreadsheet": "^3.1.15",
