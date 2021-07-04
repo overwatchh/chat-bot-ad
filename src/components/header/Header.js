@@ -1,5 +1,5 @@
-import "./header.scss";
-import React from "react";
+import './header.scss';
+import React from 'react';
 
 const Header = () => {
   return (
@@ -8,14 +8,14 @@ const Header = () => {
         <div className="header-img">
           <img
             className="header-img--circle"
-            src="./media/hanzcua.jpg"
+            src="./media/KOL.png"
             alt="avatar"
           />
         </div>
         <div className="header-img">
           <img src="./media/message-icon.png" alt="chat-icon" />
         </div>
-        <div className="header-text">Hanz Cua</div>
+        <div className="header-text">Rudy Baldwin</div>
       </div>
     </div>
   );

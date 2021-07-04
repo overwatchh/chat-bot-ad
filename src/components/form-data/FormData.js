@@ -47,7 +47,7 @@ const FormData = () => {
       {!submited ? (
         <Form onSubmit={handleSubmit}>
           <h3 className="Contact_form-title">
-            Order form Shiva Lucky Charm by Hanz Cua for
+            Order form Sutra Lucky Charm by Rudy Baldwin for
           </h3>
           <Form.Group controlId="userName">
             <Form.Label>Name</Form.Label>

@@ -14,7 +14,7 @@ const Chatbot = () => {
       }}
       inputStyle={{ display: 'none' }}
       width="100%"
-      botAvatar="./media/hanzcua.jpg"
+      botAvatar="./media/KOL.png"
       userDelay={0}
       botDelay={0}
       steps={steps}

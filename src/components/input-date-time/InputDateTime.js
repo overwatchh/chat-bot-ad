@@ -5,9 +5,10 @@ import './InputDateTime.scss';
 const InputDateTime = ({ triggerNextStep, trigger }) => {
   const [day, setDay] = useState(null);
   const [month, setMonth] = useState(null);
+  const [year, setYear] = useState(null);
 
   const handleNextStep = () => {
-    if (day && month) {
+    if (day && month && year) {
       triggerNextStep({ value: { day, month }, trigger });
     }
   };
@@ -17,10 +18,13 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
   const months = Array(12)
     .fill(0)
     .map((_, index) => index + 1);
+  const years = Array(61)
+    .fill(0)
+    .map((_, index) => 2000 - index);
 
   useEffect(() => {
     handleNextStep();
-  }, [day, month]);
+  }, [day, month, year]);
   return (
     <div className="InputDateTime">
       <select
@@ -37,6 +41,7 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
         ))}
       </select>
       <select
+        className="InputDateTime__month"
         onChange={(e) => {
           setMonth(e.target.value);
         }}
@@ -45,6 +50,19 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
         {months.map((month, i) => (
           <option key={i} value={month}>
             {month}
+          </option>
+        ))}
+      </select>
+      <select
+        className="InputDateTime__year"
+        onChange={(e) => {
+          setYear(e.target.value);
+        }}
+      >
+        <option value="year">Year</option>
+        {years.map((year, i) => (
+          <option key={i} value={year}>
+            {year}
           </option>
         ))}
       </select>
