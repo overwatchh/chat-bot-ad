@@ -4,7 +4,7 @@
 export const contents = [
   {
     id: 'bot_say_intro',
-    message: `
+    message: ` I'm <span style="color:rgb(134, 144, 254)">Rudy Baldwin</span>. Psychic reader and astrologer.
 
 My horoscope for month stunned whole Filipines. 3 zodiac signs will start rolling in money, and 2 signs will become poor.<br /><br />
 

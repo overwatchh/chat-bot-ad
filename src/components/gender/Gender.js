@@ -33,7 +33,7 @@ const Gender = ({ triggerNextStep, trigger }) => {
         className={classnames({ hide: hideFemale })}
         onClick={() => handleClick(genderOptions.FEMALE)}
       >
-        Femail
+        Female
       </button>
     </div>
   );
