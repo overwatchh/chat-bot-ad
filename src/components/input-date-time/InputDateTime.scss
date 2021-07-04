@@ -3,4 +3,11 @@
   &__month {
     margin-right: 4px;
   }
+  &__day:disabled,
+  &__month:disabled,
+  &__year:disabled {
+    border: 1px solid #000;
+    color: #000;
+    opacity: 1;
+  }
 }

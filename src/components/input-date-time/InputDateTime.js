@@ -6,9 +6,11 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
   const [day, setDay] = useState(null);
   const [month, setMonth] = useState(null);
   const [year, setYear] = useState(null);
+  const [complete, setComplete] = useState(false);
 
   const handleNextStep = () => {
-    if (day && month && year) {
+    if (day && month && year && !complete) {
+      setComplete(true);
       triggerNextStep({ value: { day, month }, trigger });
     }
   };
@@ -32,6 +34,7 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
         onChange={(e) => {
           setDay(e.target.value);
         }}
+        disabled={complete}
       >
         <option value="day">Day</option>
         {days.map((day, i) => (
@@ -45,6 +48,7 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
         onChange={(e) => {
           setMonth(e.target.value);
         }}
+        disabled={complete}
       >
         <option value="month">Month</option>
         {months.map((month, i) => (
@@ -58,6 +62,7 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
         onChange={(e) => {
           setYear(e.target.value);
         }}
+        disabled={complete}
       >
         <option value="year">Year</option>
         {years.map((year, i) => (

@@ -11,10 +11,14 @@ const Gender = ({ triggerNextStep, trigger }) => {
 
   const [hideMale, setHideMale] = useState(false);
   const [hideFemale, setHideFemale] = useState(false);
+  const [complete, setComplete] = useState(false);
 
   const handleClick = (gender) => {
     gender === genderOptions.MALE ? setHideFemale(true) : setHideMale(true);
-    triggerNextStep({ value: '', trigger });
+    setComplete(true);
+    if (!complete) {
+      triggerNextStep({ value: '', trigger });
+    }
   };
 
   return (
