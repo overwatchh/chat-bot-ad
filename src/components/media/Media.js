@@ -1,6 +1,11 @@
-import './media.scss';
-import React, { useEffect } from 'react';
-import { Carousel } from 'react-bootstrap';
+import "./media.scss";
+import React, { useEffect } from "react";
+import { Carousel } from "react-bootstrap";
+
+import ProductImg1 from "./assets/img1.jpg";
+import ProductImg2 from "./assets/img2.jpg";
+import ProductImg3 from "./assets/img3.jpg";
+
 const Media = ({ trigger, triggerNextStep, srcs, type }) => {
   useEffect(() => {
     triggerNextStep({ value: undefined, trigger });
@@ -8,11 +13,7 @@ const Media = ({ trigger, triggerNextStep, srcs, type }) => {
   return (
     <Carousel className="Media" indicators={false} interval={null}>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="./media/img2.jpg"
-          alt="Second slide"
-        />
+        <img className="d-block w-100" src={ProductImg1} alt="Second slide" />
       </Carousel.Item>
       <Carousel.Item>
         {/* <img
@@ -21,7 +22,7 @@ const Media = ({ trigger, triggerNextStep, srcs, type }) => {
           alt="First slide"
         /> */}
         <video
-          poster="./media/img1.jpg"
+          poster={ProductImg1}
           className="media-video"
           width="320"
           height="240"
@@ -33,11 +34,7 @@ const Media = ({ trigger, triggerNextStep, srcs, type }) => {
       </Carousel.Item>
 
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="./media/img3.jpg"
-          alt="Third slide"
-        />
+        <img className="d-block w-100" src={ProductImg3} alt="Third slide" />
       </Carousel.Item>
     </Carousel>
   );

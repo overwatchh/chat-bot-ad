@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import './InputDateTime.scss';
+import "./InputDateTime.scss";
 
 const InputDateTime = ({ triggerNextStep, trigger }) => {
   const [day, setDay] = useState(null);
@@ -26,7 +26,7 @@ const InputDateTime = ({ triggerNextStep, trigger }) => {
 
   useEffect(() => {
     handleNextStep();
-  }, [day, month, year]);
+  }, [day, month, year, handleNextStep]);
   return (
     <div className="InputDateTime">
       <select

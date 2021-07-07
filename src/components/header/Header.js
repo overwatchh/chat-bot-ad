@@ -1,19 +1,18 @@
-import './header.scss';
-import React from 'react';
+import "./header.scss";
+import React from "react";
+
+import KOLImg from "./assets/KOL.png";
+import MessageIcon from "./assets/message-icon.png";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="header-container">
         <div className="header-img">
-          <img
-            className="header-img--circle"
-            src="./media/KOL.png"
-            alt="avatar"
-          />
+          <img className="header-img--circle" src={KOLImg} alt="avatar" />
         </div>
         <div className="header-img">
-          <img src="./media/message-icon.png" alt="chat-icon" />
+          <img src={MessageIcon} alt="chat-icon" />
         </div>
         <div className="header-text">Rudy Baldwin</div>
       </div>
