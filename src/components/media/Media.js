@@ -5,6 +5,7 @@ import { Carousel } from "react-bootstrap";
 import ProductImg1 from "./assets/img1.jpg";
 import ProductImg2 from "./assets/img2.jpg";
 import ProductImg3 from "./assets/img3.jpg";
+import ProductVideo from "./assets/video1.mp4";
 
 const Media = ({ trigger, triggerNextStep, srcs, type }) => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const Media = ({ trigger, triggerNextStep, srcs, type }) => {
   return (
     <Carousel className="Media" indicators={false} interval={null}>
       <Carousel.Item>
-        <img className="d-block w-100" src={ProductImg1} alt="Second slide" />
+        <img className="d-block w-100" src={ProductImg2} alt="Second slide" />
       </Carousel.Item>
       <Carousel.Item>
         {/* <img
@@ -28,7 +29,7 @@ const Media = ({ trigger, triggerNextStep, srcs, type }) => {
           height="240"
           controls
         >
-          <source src="./media/video1.mp4" type="video/mp4" />
+          <source src={ProductVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </Carousel.Item>
