@@ -1,19 +1,14 @@
-import React from 'react';
-import Typewriter from 'typewriter-effect';
-import { useSpeechSynthesis } from 'react-speech-kit';
+import React from "react";
+import Typewriter from "typewriter-effect";
 function TypingEffect({ message, trigger, triggerNextStep }) {
-  const { speak } = useSpeechSynthesis();
   return (
     <Typewriter
       options={{
-        cursor: '',
-        delay: 'natural',
+        cursor: "",
+        delay: 0,
       }}
       onInit={(typewriter) => {
         typewriter
-          .callFunction(() => {
-            // speak({ text: message });
-          })
           .typeString(message)
           .start()
           .callFunction(() => {
