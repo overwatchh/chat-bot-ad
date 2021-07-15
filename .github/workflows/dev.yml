@@ -1,14 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy production
+name: Deploy develop
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    branches: [develop]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,4 +36,4 @@ jobs:
           server: ftp.luckycharm.store/
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server_dir: /public_html/
+          server_dir: /public_html/dev/
