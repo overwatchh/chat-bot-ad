@@ -1,7 +1,7 @@
 .InputDateTime {
   &__day,
   &__month {
-    margin-right: 4px;
+    margin-right: 8px;
   }
   &__day:disabled,
   &__month:disabled,
@@ -9,5 +9,9 @@
     border: 1px solid #000;
     color: #000;
     opacity: 1;
+  }
+  & > select {
+    font-size: 20px;
+    padding: 2px 4px;
   }
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import ClipLoader from "react-spinners/ClipLoader";
-
 import { addRow } from "../../helpers/spreadSheet";
 
 import "./form-data.scss";
