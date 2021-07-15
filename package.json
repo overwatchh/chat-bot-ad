@@ -1,6 +1,6 @@
 {
   "name": "chat-bot-ad",
-  "homepage": "http://luckycharm.store/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "bootstrap": "^4.6.0",
     "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
     "get-zodiac-sign": "^1.0.3",
     "google-spreadsheet": "^3.1.15",
     "moment": "^2.29.1",
