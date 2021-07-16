@@ -1,33 +1,32 @@
-import { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import ClipLoader from 'react-spinners/ClipLoader';
+import { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import ClipLoader from "react-spinners/ClipLoader";
+import { addRow } from "../../helpers/spreadSheet";
 
-import { addRow } from '../../helpers/spreadSheet';
-
-import './form-data.scss';
+import "./form-data.scss";
 
 const FormData = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [phoneValidateMessage, setPhoneValidateMessage] = useState('');
-  const [address, setAddress] = useState('');
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [phoneValidateMessage, setPhoneValidateMessage] = useState("");
+  const [address, setAddress] = useState("");
   const [submited, setSubmited] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handlePhone = (phone) => {
-    const regex = new RegExp('^\\d{11}$', 'g');
+    const regex = new RegExp("^\\d{11}$", "g");
     const is11PhoneNumber = regex.test(phone);
     if (!is11PhoneNumber) {
-      setPhoneValidateMessage('*Please enter 11 numbers');
+      setPhoneValidateMessage("*Please enter 11 numbers");
     } else {
-      setPhoneValidateMessage('');
+      setPhoneValidateMessage("");
     }
     setPhone(phone);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const isValidateForm = phoneValidateMessage === '' ? true : false;
+    const isValidateForm = phoneValidateMessage === "" ? true : false;
     if (isValidateForm) {
       const data = { name, phone_number: phone, address };
       setIsSubmitting(true);
@@ -37,7 +36,7 @@ const FormData = () => {
           setIsSubmitting(false);
         },
         () => {
-          alert('some thing went wrong');
+          alert("some thing went wrong");
         }
       );
     }
@@ -84,15 +83,15 @@ const FormData = () => {
           </Form.Group>
 
           <Button
-            className="btn-rounded"
-            style={{ width: '100%', padding: '10px' }}
-            variant="success"
+            className="btn-rounded Contact_form__submitBtn"
+            style={{ width: "100%", padding: "10px" }}
+            variant="danger"
             type="submit"
           >
             {isSubmitting ? (
               <ClipLoader color="#fff" loading={true} size={35} />
             ) : (
-              'Order'
+              "Order"
             )}
           </Button>
         </Form>

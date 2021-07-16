@@ -1,0 +1,20 @@
+.BuyNowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+  background-color: rgb(255, 16, 1);
+  width: 275.55px;
+  height: 52.95px;
+  text-decoration: none;
+  border-radius: 175px 35px;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
