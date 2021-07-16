@@ -12,9 +12,17 @@
   height: 52.95px;
   text-decoration: none;
   border-radius: 175px 35px;
-
+  animation: zoom-in-out 1.5s infinite;
   &:hover {
     text-decoration: none;
     color: #fff;
+  }
+}
+@keyframes zoom-in-out {
+  from {
+    transform: scale(0.8, 0.8);
+  }
+  to {
+    transform: scale(1.2, 1.2);
   }
 }
