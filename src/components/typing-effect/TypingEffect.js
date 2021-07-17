@@ -5,7 +5,7 @@ function TypingEffect({ message, trigger, triggerNextStep }) {
     <Typewriter
       options={{
         cursor: "",
-        delay: 80,
+        delay: 0,
       }}
       onInit={(typewriter) => {
         typewriter
