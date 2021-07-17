@@ -125,7 +125,7 @@ Answer 2 questions to get a free horoscope.`,
   },
   {
     id: "bot_say_prediction_14",
-    message: `I always try to help people solve their problems, and I never try to profit from it. That is why, until 30 December inclusive, you get a 40% discount on the Sutra Lucky Charms. The price for you is only <span style="color:red">2499 ₱ + Free shipping nationwide</span>`,
+    message: `I always try to help people solve their problems, and I never try to profit from it. That is why, until 30 December inclusive, you get a <span style="color:red">40% discount</span> on the Sutra Lucky Charms.`,
     trigger: "bot_say_prediction_15",
     asMessage: true,
   },
