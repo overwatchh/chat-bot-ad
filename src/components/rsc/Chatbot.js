@@ -5,9 +5,9 @@ import Header from "../header/Header";
 
 import KOLImg from "../header/assets/KOL.png";
 
-const Chatbot = (props) => {
-  console.log("props", props);
-  const steps = getSteps(props.adManager);
+const Chatbot = ({ adManager }) => {
+  const steps = getSteps(adManager, adManager.isTypingEffect);
+  const botDelay = adManager.isTypingEffect ? 0 : 2000;
   return (
     <ChatBot
       bubbleStyle={{
@@ -20,7 +20,7 @@ const Chatbot = (props) => {
       width="100%"
       botAvatar={KOLImg}
       userDelay={0}
-      botDelay={0}
+      botDelay={botDelay}
       steps={steps}
       headerComponent={<Header />}
     />

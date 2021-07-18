@@ -5,6 +5,7 @@ import Gender from "../gender/Gender";
 import Media from "../media/Media";
 import { contents } from "./content";
 import Zodiac from "../zodiac/Zodiac";
+import TextWrapper from "../TextWrapper";
 const LANDING_PAGE =
   "https://www.zodiacnews.website/b3?utm_source=F0C3F9&utm_campaign=AE4EF6&utm_content=6EEEF7&utm_medium=D038F5";
 export const steps = contents.map((step) => {
@@ -54,11 +55,14 @@ export const steps = contents.map((step) => {
 });
 
 export const getSteps = (adManager, typingEffect = true) => {
+  const MessageComponent = typingEffect ? Typewriter : TextWrapper;
   const steps = contents.map((step) => {
     if (step.asMessage) {
       return {
         id: step.id,
-        component: <Typewriter trigger={step.trigger} message={step.message} />,
+        component: (
+          <MessageComponent trigger={step.trigger} message={step.message} />
+        ),
         asMessage: true,
       };
     } else {
