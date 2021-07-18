@@ -5,7 +5,7 @@ function BuyNowButton({ title, href }) {
   const clickHandler = () => {
     ReactGA.event({
       category: "Buy now ",
-      action: "Go to landing page",
+      action: "Go to landing page( nam sub-domain)",
     });
   };
   return (
