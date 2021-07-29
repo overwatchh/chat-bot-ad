@@ -3,7 +3,7 @@ export const adManagers = [
     desc: "Typing Effect",
     path: "/",
     landingPageLink:
-      "https://www.horuseye.online/287cuoi?utm_source=62243E&utm_campaign=525298&utm_content=7C0DFE&utm_medium=D1186D",
+      "https://www.mczodiac21.live/ncuoi?fbclid=IwAR2maA2IxE4coupfEwYqidZIEXJXzXg4kLy_GiWQqbm__yhU-Pgn6KrfE4Q",
     isTypingEffect: false,
   },
 ];
