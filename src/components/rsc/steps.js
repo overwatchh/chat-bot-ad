@@ -86,14 +86,6 @@ export const getSteps = (adManager, typingEffect = true) => {
           delay: 0,
         };
       }
-      if (step.id === "bot_say_luckyCharm_imgs") {
-        return {
-          id: step.id,
-          component: <Media trigger={step.trigger} />,
-          asMessage: true,
-          delay: 0,
-        };
-      }
       if (step.id === "ans_infoForm") {
         return {
           id: step.id,
