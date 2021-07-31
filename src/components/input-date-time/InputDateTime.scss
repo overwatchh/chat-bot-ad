@@ -6,12 +6,17 @@
   &__day:disabled,
   &__month:disabled,
   &__year:disabled {
-    border: 1px solid #000;
-    color: #000;
+    border: 1px solid #fff;
+    color: #fff;
     opacity: 1;
   }
   & > select {
     font-size: 20px;
-    padding: 2px 4px;
+    font-size: 20px;
+    color: #fff;
+    background: #722ed1;
+    border: none;
+    padding: 4px 15px;
+    border-radius: 2px;
   }
 }

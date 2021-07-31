@@ -1,12 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy develop
+name: Deploy phuong
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [develop]
+    branches: [phuongSubdomain]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   web-deploy:
-    name: 🎉 Deploy dev
+    name: 🎉 Deploy phuong.luckycharm.store
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
@@ -36,6 +36,6 @@ jobs:
           server: 112.213.89.115
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: /public_html/dev/
+          server-dir: /public_html/phuong/
           local-dir: build/
-          state-name: .ftp-deploy-sync-state-dev.json
+          state-name: .ftp-deploy-sync-state-phuong.json

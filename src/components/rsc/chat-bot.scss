@@ -1,7 +1,11 @@
+@import "../../styles/global.scss";
 .rsc-content {
   background-color: #e3e3e3;
   height: 100vh !important;
   padding-bottom: 70px !important;
+  background: url("./images/purple_ocean.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .gJZAEs {
   height: 100vh !important;
@@ -38,6 +42,8 @@
 }
 .rsc-ts-bubble {
   margin-right: 6px !important;
+  margin-bottom: 20px !important;
+  font-family: Roboto, sans-serifs !important;
 }
 .rsc > div {
   height: 100vh !important;
