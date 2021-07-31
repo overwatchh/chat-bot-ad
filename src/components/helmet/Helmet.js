@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 const HelmetComponent = ({ title, favIcon, og }) => {
+  const host = window.location.origin;
   return (
     <Helmet>
       <meta charset="utf-8" />
@@ -13,7 +14,7 @@ const HelmetComponent = ({ title, favIcon, og }) => {
       <meta name="description" content={og.description} />
       <meta property="og:title" content={og.title} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={og.image} />
+      <meta property="og:image" content={`${host}${og.image}`} />
       <meta
         name="facebook-domain-verification"
         content="4cjdontnjx65dl20n9mmmgms4rn96k"
