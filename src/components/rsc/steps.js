@@ -98,7 +98,7 @@ export const getSteps = (adManager, typingEffect = true) => {
         return {
           id: step.id,
           component: (
-            <BuyNowButton title="Learn more" href={adManager.landingPageLink} />
+            <BuyNowButton title="Buy now" href={adManager.landingPageLink} />
           ),
           delay: 0,
         };
