@@ -59,7 +59,7 @@ Answer 2 questions to get a free horoscope.`,
   },
   {
     id: "bot_say_prediction_4",
-    message: `I can clearly see that you will have the opportunity to change the chosen vector in July. This will be a favourable period for changing your life, from a bad luck to a good one, until the end of your life.`,
+    message: `I can clearly see that you will have the opportunity to change the chosen vector in January. This will be a favourable period for changing your life, from a bad luck to a good one, until the end of your life.`,
     trigger: "bot_say_prediction_5",
     asMessage: true,
   },

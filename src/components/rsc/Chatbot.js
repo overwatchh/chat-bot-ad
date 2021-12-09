@@ -3,7 +3,7 @@ import { getSteps } from "./steps";
 import ChatBot from "react-simple-chatbot";
 import Header from "../header/Header";
 
-import KOLImg from "../../assets/images/rudy_baldwin.png";
+import KOLImg from "../../assets/images/rudy_baldwin_1.jpeg";
 
 const Chatbot = ({ adManager }) => {
   const steps = getSteps(adManager, adManager.isTypingEffect);

@@ -1,7 +1,7 @@
 import "./header.scss";
 import React from "react";
 
-import KOLImg from "../../assets/images/rudy_baldwin.png";
+import KOLImg from "../../assets/images/rudy_baldwin_1.jpeg";
 import MessageIcon from "./assets/message-icon.png";
 
 const Header = () => {
